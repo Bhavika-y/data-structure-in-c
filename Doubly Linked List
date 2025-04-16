@@ -122,6 +122,33 @@ if(temp!=NULL){
     printf("Node deleted at position %d\n",pos);
 }
 }
+void search(int ele){
+    if(head==NULL)
+        printf("List is Empty!!\n");
+    else{
+        Node* temp=head;
+        int i=0;
+        while(temp!=NULL){
+            i++;
+            if(temp->data==ele){
+                printf("Found at %d position!!!\n",i);
+                return;
+            }
+            temp=temp->next;
+        }
+        printf("Not Found!!\n");
+    }
+}
+void display(){
+    if(head==NULL)
+        printf("List is Empty!!\n");
+    else{
+        printf("Elements are:\n");
+        for(Node* temp=head;temp!=NULL;temp=temp->next){
+            printf("%d ",temp->data);
+        }
+    }
+}
 
 int main(){
     while(1){
